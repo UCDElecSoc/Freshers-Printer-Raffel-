@@ -1,0 +1,11 @@
+*.csv
+*.xlsx
+*.xls
+node_modules/
+.local/
+test-results/
+.env*
+
+.wrangler/
+
+!eligible-participants.csv

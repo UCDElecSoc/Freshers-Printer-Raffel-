@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ElecSoc Freshers Raffle</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" href="assets/printer.png" as="image">
+  <script defer src="participants.js"></script>
+  <script defer src="raffle.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="site-brand">
+    <img src="assets/elecsoc-logo.png" alt="ElecSoc logo" width="100" height="64">
+    <h1>ElecSoc Freshers Raffle</h1>
+  </header>
+  <main>
+
+    <div class="stage" id="stage">
+      <p id="name">Ready to win?</p>
+      <p id="status" role="status" aria-live="polite"> </p>
+    </div>
+    <button id="draw" disabled>Draw a winner</button>
+    <button id="sound-toggle" class="sound-toggle" type="button" aria-pressed="true" aria-label="Enable sound effects">Sound: On</button>
+  </main>
+  <dialog id="prize-reveal" aria-labelledby="prize-heading" aria-describedby="prize-description">
+    <button id="close-prize" class="close-prize" aria-label="Close prize reveal">Back to draw <span aria-hidden="true">×</span></button>
+    <div class="prize-layout">
+      <div class="prize-copy">
+        <p class="prize-eyebrow">CONGRATULATIONS</p>
+        <h2 id="prize-heading">YOU WON!</h2>
+        <p id="prize-winner"></p>
+        <p id="prize-description">Your new <strong>Bambu Lab A1 mini</strong><br>3D printer is waiting for you.</p>
+
+      </div>
+      <div class="prize-visual">
+        <div class="prize-halo" aria-hidden="true"></div>
+        <div class="prize-ring" aria-hidden="true"></div>
+        <img id="prize-image" src="assets/printer.png" alt="Bambu Lab A1 mini 3D printer" width="622" height="842">
+      </div>
+    </div>
+    <div id="confetti" aria-hidden="true"></div>
+  </dialog>
+</body>
+</html>
